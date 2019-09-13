@@ -1,0 +1,233 @@
+body {
+    margin: 0px;
+    padding: 0px;
+    background-color: floralwhite;
+    font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
+    font-size: 12px;
+}
+
+/*Fonts*/
+h1{
+    font-size: 72px;
+    font-weight: bold;
+    color: floralwhite;
+}
+
+h2{
+    font-size: 60px;
+    font-weight: bold;
+    color: floralwhite;
+}
+
+h3{
+    font-size: 48px;
+    font-stretch: expanded;
+}
+
+p{
+    font-size: 24px;
+}
+
+a{
+    color: inherit;
+    text-decoration: none;
+}
+
+.sbh1 {
+    font-size: 36px;
+    font-weight: lighter;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    color: black;
+}
+
+.sbh2 {
+    font-size: 48px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.sbh3 {
+    font-size: 36px;
+}
+
+.navs1 {
+    font-size: 36px;
+    font-weight: lighter;
+    color: floralwhite;
+}
+
+.navs2 {
+    font-size: 36px;
+    font-weight: lighter;
+    color: white;
+}
+
+.credits {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 24px;
+    margin: 0;
+}
+/*End fonts*/
+
+nav{
+    margin: -36px 0 0 0;
+    width: 100%;
+    background-color: forestgreen;
+}
+
+ul{
+    list-style: none;
+    display: flex;
+}
+
+li{
+    margin: 0px auto;
+}
+
+ul li:hover{
+    color: #ffeaa7;
+}
+
+h3 a:hover{
+    color: #55efc4;
+}
+
+#Jus:hover{
+    color: aqua;
+}
+
+#banner {
+    background-color: black;
+}
+
+.tag{
+    color: #f3ff95;
+}
+
+.slideshow {
+    width: 100%;
+    height: 60vh;
+    overflow: hidden;
+}
+
+/* Slide animation */
+@-webkit-keyframes slideAnimation{
+    0% {left:0%;}
+    10% {left:0%;}
+    20% {left:100%;}
+    30% {left:200%;}
+    40% {left:300%;}
+    50% {left:400%;}
+    60% {left:300%;}
+    70% {left:200%;}
+    80% {left:100%;}
+    90% {left:0%;}
+}
+
+.gallery{
+    width: 500%;
+    display: flex;
+    margin: 0 0 0 -400%;
+    position: relative;
+    -webkit-animation-name: slideAnimation;
+    -webkit-animation-duration: 30s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-direction: alternate;
+    -webkit-animation-play-state: running;
+}
+
+.imageContainer img{
+    width: 100%;
+    position: relative;
+    float: left;
+    opacity: 0.7;
+}
+
+/*Banner text*/
+#banner .text{
+    position: absolute;
+    top: 20%;
+    right: 5%;
+    line-height: 20px;
+}
+
+main{
+    text-align: center;
+}
+
+#services{
+    background-image: url("../images/serBack.jpg");
+    background-attachment: fixed;
+}
+
+.serContainer{
+    padding: 10px;
+}
+
+.serText{
+    font-size: 28px;
+    padding-left: 10px;
+}
+
+.serText2{
+    font-size: 28px;
+    padding-right: 10px;
+    text-align: right;
+}
+
+.serImage{
+    ;
+}
+
+.serImage img{
+    width: 100%;
+    opacity: 1.0;
+}
+
+.centering{
+    text-align: center;
+}
+
+#contact{
+    color: floralwhite;
+    background-color: #74b9ff;
+}
+
+.centContainer{
+    display: flex;
+    padding-left: 8%;
+    align-items: center;
+}
+
+#aboutus img{
+    width: 10%;
+    height: 10%;
+    padding-right: 10px;
+}
+
+#quote{
+    border: 2px solid white;
+    background-color: #0984e3;
+    color: white;
+    width: fit-content;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    padding: 10px;
+}
+
+#quote:hover{
+    border-color: #81ecec;
+    color: #81ecec;
+}
+
+footer{
+    background-color: #636e72;
+    text-align: center;
+}
+
+.navs2 ul, .credits{
+    margin: 0px;
+    padding: 5px 5px 10px 5px;
+}
