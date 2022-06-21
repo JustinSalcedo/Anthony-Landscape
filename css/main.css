@@ -70,19 +70,23 @@ a{
 }
 /*End fonts*/
 
-nav{
-    margin: -36px 0 0 0;
+
+/* Navbar */
+
+nav {
     width: 100%;
     background-color: forestgreen;
+}
+
+nav ul {
+    margin: 0%;
+    padding: 0%;
 }
 
 ul{
     list-style: none;
     display: flex;
-}
-
-li{
-    margin: 0px auto;
+    justify-content: space-around;
 }
 
 ul li:hover{
@@ -107,22 +111,34 @@ h3 a:hover{
 
 .slideshow {
     width: 100%;
-    height: 60vh;
+    height: min-content;
+    max-height: 60vh;
     overflow: hidden;
 }
 
 /* Slide animation */
-@-webkit-keyframes slideAnimation{
-    0% {left:0%;}
-    10% {left:0%;}
-    20% {left:100%;}
-    30% {left:200%;}
-    40% {left:300%;}
-    50% {left:400%;}
-    60% {left:300%;}
-    70% {left:200%;}
-    80% {left:100%;}
-    90% {left:0%;}
+@keyframes slideAnimation {
+    0% { left: 0%; }
+    12.5% { left: 100%; }
+    25% { left: 200%; }
+    37.5% { left: 300%; }
+    50% { left: 400%; }
+    62.5% { left: 300%; }
+    75% { left: 200%; }
+    87.5% { left: 100%; }
+    100% { left: 0%; }
+}
+
+@-webkit-keyframes slideAnimation {
+    0% { left: 0%; }
+    12.5% { left: 100%; }
+    25% { left: 200%; }
+    37.5% { left: 300%; }
+    50% { left: 400%; }
+    62.5% { left: 300%; }
+    75% { left: 200%; }
+    87.5% { left: 100%; }
+    100% { left: 0%; }
 }
 
 .gallery{
@@ -135,6 +151,13 @@ h3 a:hover{
     -webkit-animation-iteration-count: infinite;
     -webkit-animation-direction: alternate;
     -webkit-animation-play-state: running;
+}
+
+.overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: hsla(0, 0%, 0%, 0.5);
 }
 
 .imageContainer img{
@@ -156,9 +179,15 @@ main{
     text-align: center;
 }
 
+/* Services */
+
 #services{
     background-image: url("../images/serBack.jpg");
     background-attachment: fixed;
+}
+
+#services .gridContainer {
+	background-color: hsla(40, 100%, 97%, 0.8);
 }
 
 .serContainer{
@@ -174,10 +203,6 @@ main{
     font-size: 28px;
     padding-right: 10px;
     text-align: right;
-}
-
-.serImage{
-    ;
 }
 
 .serImage img{
@@ -196,14 +221,14 @@ main{
 
 .centContainer{
     display: flex;
-    padding-left: 8%;
+    padding: 8px 8%;
     align-items: center;
 }
 
 #aboutus img{
     width: 10%;
     height: 10%;
-    padding-right: 10px;
+    padding-right: 20px;
 }
 
 #quote{
@@ -225,9 +250,108 @@ main{
 footer{
     background-color: #636e72;
     text-align: center;
+    padding: 8px 0%;
 }
 
 .navs2 ul, .credits{
     margin: 0px;
     padding: 5px 5px 10px 5px;
+}
+
+/* @media screen and (min-width: 768px) and (min-height: 1000px) {
+    #banner .text {
+        top: 10%;
+    }
+} */
+
+@media screen and (max-width: 1024px) {
+    #banner .text {
+        top: 15%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    #banner .text {
+        top: 10%;
+    }
+
+    h1 {
+        font-size: 48px;
+    }
+
+    h2 {
+        font-size: 42px;
+    }
+
+    h3 {
+        font-size: 36px;
+    }
+
+    .navs1, .navs2 {
+        font-size: 28px;
+    }
+
+    main {
+        padding: 0% 20px;
+    }
+
+    #contact {
+        padding: 0% 20px;
+    }
+
+    #contact br:nth-child(6) {
+        display: none;
+    }
+
+    .sbh2 {
+        font-size: 36px;
+    }
+
+    #aboutus .sbh3 {
+        font-size: 32px;
+    }
+}
+
+@media screen and (max-width: 560px) {
+    #banner .text {
+        top: 6%;
+        line-height: 15px;
+    }
+
+    h1 {
+        font-size: 36px;
+    }
+
+    h2, .sbh2 {
+        font-size: 32px;
+    }
+
+    h3, .sbh3 {
+        font-size: 24px;
+    }
+
+    p {
+        font-size: 20px;
+    }
+
+    .navs1, .navs2, .credits {
+        font-size: 20px;
+    }
+
+    .sbh1 {
+        font-size: 28px;
+    }
+
+    .serImage {
+        width: 75%;
+        margin: auto;
+    }
+
+    .centering h3 {
+        font-size: 32px;
+    }
+
+    #aboutus .sbh3 {
+        font-size: 24px;
+    }
 }
